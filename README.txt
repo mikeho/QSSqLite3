@@ -1,8 +1,3 @@
-QSForm Library for iOS
+QSSqLite3 Library for iOS
 
-This library provides Form-like functionality within a UITableViewController construct.  Individual Form items can be things like
-  * text fields
-  * switches (e.g. checkboxes)
-  * list selectors (single-select and multi-select)
-  * image capture
-  * etc.
+This library provides database access to any SQLite v3 database file.  Any Xcode project using this library requires the libsqlite v3 framework to be included in the project/build.
