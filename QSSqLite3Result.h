@@ -27,8 +27,7 @@
 #import <sqlite3.h>
 #import <unistd.h>
 
-#import "SqLite3Database.h"
-
+@class SqLite3Database;
 @class SqLite3DatabaseRow;
 
 @interface SqLite3DatabaseResult : NSObject {
