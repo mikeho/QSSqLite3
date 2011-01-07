@@ -1,7 +1,8 @@
 /**
- * QSSqLite3 Library for iOS
+ * QSSqLite3.h
  * 
  * Copyright (c) 2010 - 2011, Quasidea Development, LLC
+ * For more information, please go to http://www.quasidea.com/
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -28,5 +29,18 @@
 #import "QSSqLite3Database.h"
 #import "QSSqLite3Result.h"
 #import "QSSqLite3Row.h"
+
+#define SqLite3BusyRetryTimeout	20
+#define SqLite3BusyRetryCount	5
+
+#define SqLite3TypeBlob			1
+#define SqLite3TypeVarChar		2
+#define SqLite3TypeChar			3
+#define SqLite3TypeInteger		4
+#define SqLite3TypeDateTime		5
+#define SqLite3TypeDate			6
+#define SqLite3TypeTime			7
+#define SqLite3TypeFloat		8
+#define SqLite3TypeBit			9
 
 #endif __QSSQLITE3_INCLUDE__

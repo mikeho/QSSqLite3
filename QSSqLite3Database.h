@@ -1,27 +1,31 @@
-//
-//  SqLite3Database.h
-//  iVQ
-//
-//  Created by Mike Ho on 8/29/10.
-//  Copyright 2010 Quasidea Development, LLC. All rights reserved.
-//
+/**
+ * QSSqLite3Database.h
+ * 
+ * Copyright (c) 2010 - 2011, Quasidea Development, LLC
+ * For more information, please go to http://www.quasidea.com/
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 #import <unistd.h>
-
-#define SqLite3BusyRetryTimeout	20
-#define SqLite3BusyRetryCount	5
-
-#define SqLite3TypeBlob			1
-#define SqLite3TypeVarChar		2
-#define SqLite3TypeChar			3
-#define SqLite3TypeInteger		4
-#define SqLite3TypeDateTime		5
-#define SqLite3TypeDate			6
-#define SqLite3TypeTime			7
-#define SqLite3TypeFloat		8
-#define SqLite3TypeBit			9
 
 @class SqLite3DatabaseResult;
 
