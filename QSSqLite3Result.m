@@ -25,9 +25,9 @@
 
 #import "QSSqLite3.h"
 
-@implementation SqLite3DatabaseResult
+@implementation QSSqLite3Result
 
--(id)initWithStatement:(sqlite3_stmt *)objStatement Database:(SqLite3Database *)objDatabase {
+-(id)initWithStatement:(sqlite3_stmt *)objStatement Database:(QSSqLite3Database *)objDatabase {
 	// Store Object Pointers
 	_objDatabase = objDatabase;
 	[_objDatabase retain];
@@ -53,9 +53,9 @@
 	return self;
 }
 
--(SqLite3DatabaseRow *)getNextRow {
+-(QSSqLite3Row *)getNextRow {
 	if (_intPointer < [_arrResults count]) {
-		SqLite3DatabaseRow * objToReturn = [[[SqLite3DatabaseRow alloc] initWithDictionary:[_arrResults objectAtIndex:_intPointer]] autorelease];
+		QSSqLite3Row * objToReturn = [[[QSSqLite3Row alloc] initWithDictionary:[_arrResults objectAtIndex:_intPointer]] autorelease];
 		_intPointer++;
 		return objToReturn;
 	} else {

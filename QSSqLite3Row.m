@@ -25,7 +25,7 @@
 
 #import "QSSqLite3.h"
 
-@implementation SqLite3DatabaseRow
+@implementation QSSqLite3Row
 
 -(id)initWithDictionary:(NSDictionary *)dctRow {
 	_dctRow = dctRow;

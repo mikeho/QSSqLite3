@@ -25,7 +25,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SqLite3DatabaseRow : NSObject {
+@interface QSSqLite3Row : NSObject {
 	@protected
 		NSDictionary * _dctRow;
 }

@@ -25,7 +25,7 @@
 
 #import "QSSqLite3.h"
 
-@implementation SqLite3Database
+@implementation QSSqLite3Database
 
 #pragma mark -
 #pragma mark Object Lifecycle
@@ -86,7 +86,7 @@
 #pragma mark -
 #pragma mark Query Execution
 
-- (SqLite3DatabaseResult *)query:(NSString *)strQuery, ... {
+- (QSSqLite3Result *)query:(NSString *)strQuery, ... {
 	va_list arrParameters;
 	va_start(arrParameters, strQuery);
 
@@ -100,12 +100,12 @@
 	
 	va_end(arrParameters);
 
-	SqLite3DatabaseResult * objToReturn = [self query:strQuery WithArguments:arrArguments];
+	QSSqLite3Result * objToReturn = [self query:strQuery WithArguments:arrArguments];
 	[arrArguments release];
 	return objToReturn;
 }
 
-- (SqLite3DatabaseResult *)query:(NSString *)strQuery WithArguments:(NSArray *)arrArguments {
+- (QSSqLite3Result *)query:(NSString *)strQuery WithArguments:(NSArray *)arrArguments {
 	sqlite3_stmt * objStatement;
 
 	if (![self prepareSql:strQuery WithStatement:&objStatement])
@@ -116,7 +116,7 @@
 		[self bindObject:[arrArguments objectAtIndex:i] AtColumnIndex:i ForStatement:objStatement];
 	}
 
-	SqLite3DatabaseResult * objToReturn = [[[SqLite3DatabaseResult alloc] initWithStatement:objStatement Database:self] autorelease];
+	QSSqLite3Result * objToReturn = [[[QSSqLite3Result alloc] initWithStatement:objStatement Database:self] autorelease];
 	return objToReturn;
 }
 

@@ -27,23 +27,23 @@
 #import <sqlite3.h>
 #import <unistd.h>
 
-@class SqLite3Database;
-@class SqLite3DatabaseRow;
+@class QSSqLite3Database;
+@class QSSqLite3Row;
 
-@interface SqLite3DatabaseResult : NSObject {
+@interface QSSqLite3Result : NSObject {
 	@protected
 		NSMutableArray * _arrResults;
-		SqLite3Database * _objDatabase;
+		QSSqLite3Database * _objDatabase;
 		sqlite3_stmt * _objStatement;
 		int _intPointer;
 }
 
--(id)initWithStatement:(sqlite3_stmt *)objStatement Database:(SqLite3Database *)objDatabase;
--(SqLite3DatabaseRow *)getNextRow;
+-(id)initWithStatement:(sqlite3_stmt *)objStatement Database:(QSSqLite3Database *)objDatabase;
+-(QSSqLite3Row *)getNextRow;
 
 @end
 
-@interface SqLite3DatabaseResult (private)
+@interface QSSqLite3Result (private)
 
 -(bool)isRowsExist;
 -(id)getColumnDataAtColumnIndex:(NSInteger)intIndex;

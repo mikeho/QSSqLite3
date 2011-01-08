@@ -27,9 +27,9 @@
 #import <sqlite3.h>
 #import <unistd.h>
 
-@class SqLite3DatabaseResult;
+@class QSSqLite3Result;
 
-@interface SqLite3Database : NSObject {
+@interface QSSqLite3Database : NSObject {
 	@protected
 		sqlite3 * _objDatabase;
 }
@@ -41,8 +41,8 @@
 - (NSString *)errorMessage;
 - (NSInteger)lastInsertId;
 
--(SqLite3DatabaseResult *)query:(NSString *)strQuery, ...;
--(SqLite3DatabaseResult *)query:(NSString *)strQuery WithArguments:(NSArray *)arrArguments;
+-(QSSqLite3Result *)query:(NSString *)strQuery, ...;
+-(QSSqLite3Result *)query:(NSString *)strQuery WithArguments:(NSArray *)arrArguments;
 
 -(void)nonQuery:(NSString *)strQuery, ...;
 -(void)nonQuery:(NSString *)strQuery WithArguments:(NSArray *)arrArguments;
@@ -54,7 +54,7 @@
 
 @end
 
-@interface SqLite3Database (private)
+@interface QSSqLite3Database (private)
 - (bool)prepareSql:(NSString *)strSql WithStatement:(sqlite3_stmt **)objStatement;
 - (void)bindObject:(id)objToBind AtColumnIndex:(int)intIndex ForStatement:(sqlite3_stmt *)objStatement;
 @end
