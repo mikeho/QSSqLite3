@@ -109,7 +109,8 @@
 			return [NSNumber numberWithDouble:sqlite3_column_double(_objStatement, intIndex)];
 
 		case SQLITE_TEXT:
-			return [NSString stringWithFormat:@"%s", sqlite3_column_text(_objStatement, intIndex)];
+			return [[[NSString alloc] initWithUTF8String:(char *)sqlite3_column_text(_objStatement, intIndex)] autorelease];
+//			return [NSString stringWithFormat:@"%s", sqlite3_column_text(_objStatement, intIndex)];
 
 		case SQLITE_BLOB:
 			return [NSData dataWithBytes:sqlite3_column_blob(_objStatement, intIndex)
