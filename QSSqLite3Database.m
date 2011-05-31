@@ -31,7 +31,7 @@
 #pragma mark Object Lifecycle
 
 -(id)initWithFile:(NSString *)strDbPath {
-	if (self = [super init]) {
+	if ((self = [super init]) != nil) {
 		if (sqlite3_open([strDbPath fileSystemRepresentation], &_objDatabase) != SQLITE_OK)
 			NSAssert1(false, @"SQLite Error on initWithFile: %s", sqlite3_errmsg(_objDatabase));
 	}
