@@ -43,4 +43,4 @@
 #define SqLite3TypeFloat		8
 #define SqLite3TypeBit			9
 
-#endif __QSSQLITE3_INCLUDE__
+#endif // __QSSQLITE3_INCLUDE__
